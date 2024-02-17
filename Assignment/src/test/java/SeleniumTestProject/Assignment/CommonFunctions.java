@@ -9,7 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class CommonFunctions {
 	WebDriver driver;
 	
-	protected static void launchBrowser(String url, String browserType, WebDriver driver) {
+	protected static WebDriver launchBrowser(String browserType, WebDriver driver) {
 		switch(browserType.toLowerCase()) {
 			case "edge":
 				 // Instantiate a EdgeDriver class.
@@ -34,6 +34,18 @@ public class CommonFunctions {
         driver.manage().window().maximize();
 	 
         // Launch Website
-        driver.get(url);
+        driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+        
+        return driver;
+	}
+	
+	protected static void closeBrowser(WebDriver driver, int timeInSeconds) {
+		int miliSec = timeInSeconds * 1000;
+		try {
+			Thread.sleep(miliSec);
+			driver.quit();
+		} catch(Exception e) {
+			System.out.println(e);
+		}
 	}
 }
