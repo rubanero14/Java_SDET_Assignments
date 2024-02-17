@@ -12,7 +12,7 @@ public class SwitchBetweenTabsInteraction extends CommonFunctions {
 
 	public static void main(String[] args) throws InterruptedException {
 		CommonFunctions cf = new CommonFunctions();
-		WebDriver driver = launchBrowser("chrome", cf.driver);
+		WebDriver driver = launchBrowser("firefox", cf.driver);
 		
 		WebElement openTabBtn = driver.findElement(By.id("opentab"));
 		openTabBtn.click();
@@ -53,7 +53,7 @@ public class SwitchBetweenTabsInteraction extends CommonFunctions {
         // Switching to Parent window i.e Main Window.
         driver.switchTo().window(MainWindow);
 		
-		closeBrowser(driver, 5);
+		closeBrowser(driver, 3);
 	}
 
 }
