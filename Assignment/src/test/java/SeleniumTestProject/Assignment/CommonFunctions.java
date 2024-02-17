@@ -20,7 +20,7 @@ public class CommonFunctions {
 		        driver = new FirefoxDriver();
 		        break;
 			case "internet explorer":
-				 // Instantiate a ChromeDriver class.
+				 // Instantiate a InternetExplorerDriver class.
 		        driver = new InternetExplorerDriver();
 		        break;
 			case "chrome":
