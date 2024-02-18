@@ -10,11 +10,11 @@ public class IFrameInteraction extends CommonFunctions {
 	public static void main(String[] args) throws InterruptedException {
 		CommonFunctions cf = new CommonFunctions();
 		WebDriver driver = launchBrowser("chrome", cf.driver);
-		
+
 		Actions action = new Actions(driver);
-		
+
 		WebElement iFrame = driver.findElement(By.id("courses-iframe"));
-		
+
 		driver.switchTo().frame(iFrame);
 		action.scrollByAmount(0, 1000).perform();
 		Thread.sleep(1000);
@@ -22,7 +22,7 @@ public class IFrameInteraction extends CommonFunctions {
 		System.out.println("Registration link inside iframe clicked.");
 		Thread.sleep(1000);
 		driver.switchTo().parentFrame();
-		
+
 		closeBrowser(driver, 3);
 	}
 

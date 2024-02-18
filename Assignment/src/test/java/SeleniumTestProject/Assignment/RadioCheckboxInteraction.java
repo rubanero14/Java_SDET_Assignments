@@ -13,13 +13,13 @@ public class RadioCheckboxInteraction extends CommonFunctions {
 		WebDriver driver = launchBrowser("chrome", cf.driver);
 		List<WebElement> radioButtons = driver.findElements(By.className("radioButton"));
 		WebElement checkBox = driver.findElement(By.id("checkBoxOption2"));
-		
-		for(WebElement radioButton : radioButtons) {
+
+		for (WebElement radioButton : radioButtons) {
 			radioButton.click();
 		}
-		
+
 		checkBox.click();
-		
+
 		closeBrowser(driver, 5);
 	}
 

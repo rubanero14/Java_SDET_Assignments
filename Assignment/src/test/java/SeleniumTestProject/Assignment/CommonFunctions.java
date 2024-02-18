@@ -16,11 +16,11 @@ public class CommonFunctions {
 				driver = new EdgeDriver();
 		        break;
 			case "firefox":
-				 // Instantiate a ChromeDriver class.
-		        driver = new FirefoxDriver();
-		        break;
+				// Instantiate a ChromeDriver class.
+				driver = new FirefoxDriver();
+				break;
 			case "internet explorer":
-				 // Instantiate a InternetExplorerDriver class.
+				// Instantiate a InternetExplorerDriver class.
 		        driver = new InternetExplorerDriver();
 		        break;
 			case "chrome":
